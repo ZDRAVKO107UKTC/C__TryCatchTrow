@@ -60,6 +60,13 @@ int main() {
     cout << "p3 e: " << p3 << endl;
     unique_ptr<string> u_ptr = make_unique<string>("Hello World");
     print_message(*u_ptr);
+
+    shared_ptr<int> s_ptr1 = make_shared<int>(42);
+    shared_ptr<int> s_ptr2 = s_ptr1;
+
+    cout << "Num of refer: " << s_ptr1.use_count() << endl;
+
+
     cout <<"\n================="<< endl;
 
     dynamic_array_test();
