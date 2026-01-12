@@ -42,14 +42,16 @@ void dynamic_array_test(){
     delete[] dynamic_arr;
 }
 
-std::ostream& operator<<(std::ostream os, const Point& p){return os << p.x << " " << p.y;};
+
+ostream& operator<<(ostream& os, const Point& p) {os << "(X: " << p.x << ", Y: " << p.y << ")"; return os;}
 
 int main() {
     Point p1(10, 5);
     Point p2(2, 8);
 
     Point p3 = p1 + p2;
-    std::cout << p3.x << " " << p3.y << std::endl;
+    cout << p3.x << " " << p3.y << endl;
+    cout << "p3 e: " << p3 << endl;
 
 
 
