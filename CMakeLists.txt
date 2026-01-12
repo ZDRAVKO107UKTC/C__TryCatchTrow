@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 4.1)
-project(C__TryCatchTrow)
+project(CppCoreFundamentals)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(C__TryCatchTrow zadacha12.cpp)
+add_executable(CppCoreFundamentals main.cpp)
