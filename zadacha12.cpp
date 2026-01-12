@@ -1,4 +1,5 @@
 #include<iostream>
+#include <memory>
 #include<string>
 using namespace std;
 
@@ -45,6 +46,11 @@ void dynamic_array_test(){
 
 ostream& operator<<(ostream& os, const Point& p) {os << "(X: " << p.x << ", Y: " << p.y << ")"; return os;}
 
+
+void print_message(const std::string& msg) {
+    cout << msg << endl;
+}
+
 int main() {
     Point p1(10, 5);
     Point p2(2, 8);
@@ -52,10 +58,10 @@ int main() {
     Point p3 = p1 + p2;
     cout << p3.x << " " << p3.y << endl;
     cout << "p3 e: " << p3 << endl;
-
-
-
+    unique_ptr<string> u_ptr = make_unique<string>("Hello World");
+    print_message(*u_ptr);
     cout <<"\n================="<< endl;
+
     dynamic_array_test();
 
     cout <<"\n================="<< endl;
