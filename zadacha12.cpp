@@ -18,6 +18,7 @@ class Point {
 };
 
 
+
 double safe_divide(double a, double b) {
         if (b == 0) {
             throw "Division by zero";
@@ -41,12 +42,14 @@ void dynamic_array_test(){
     delete[] dynamic_arr;
 }
 
+std::ostream& operator<<(std::ostream os, const Point& p){return os << p.x << " " << p.y;};
+
 int main() {
     Point p1(10, 5);
     Point p2(2, 8);
 
     Point p3 = p1 + p2;
-    cout << p3.x << " " << p3.y << endl;
+    std::cout << p3.x << " " << p3.y << std::endl;
 
 
 
